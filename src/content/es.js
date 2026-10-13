@@ -121,7 +121,7 @@ export default {
       submit: 'Enviar solicitud',
       sending: 'Enviando...',
       ok: 'Recibimos su solicitud. Le responderemos a la brevedad.',
-      error: 'No se pudo enviar. Escríbanos a jtoha@ecofruit.cl o al +56 9 9412 9056.',
+      error: 'No se pudo enviar. Escríbanos a jtoha@ecofruit.cl o al +56 9 8758 8459.',
     },
   },
 

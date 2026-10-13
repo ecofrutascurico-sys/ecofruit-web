@@ -1,7 +1,7 @@
 // Datos de contacto (iguales en ambos idiomas)
 export const site = {
-  phone: '+56 9 9412 9056',
-  whatsapp: '56994129056', // sin + ni espacios, para el enlace de WhatsApp
+  phone: '+56 9 8758 8459',
+  whatsapp: '56987588459', // sin + ni espacios, para el enlace de WhatsApp
   email: 'jtoha@ecofruit.cl',
   place: 'Romeral, Región del Maule',
   // Ubicación de la planta (misma ficha de Google Maps)

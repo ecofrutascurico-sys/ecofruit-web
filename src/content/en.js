@@ -118,7 +118,7 @@ export default {
       submit: 'Send request',
       sending: 'Sending...',
       ok: 'We received your request. We will get back to you shortly.',
-      error: 'It could not be sent. Write to jtoha@ecofruit.cl or call +56 9 9412 9056.',
+      error: 'It could not be sent. Write to jtoha@ecofruit.cl or call +56 9 8758 8459.',
     },
   },
 
