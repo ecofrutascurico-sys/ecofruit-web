@@ -69,7 +69,7 @@ export default {
       { title: 'Other', text: 'Orange peel and other products to each customer’s requirements.', fruits: 'Ask us' },
     ],
     clients: [
-      { key: 'may', kicker: 'Wholesalers', title: 'Wholesale distribution', text: 'Steady volume and scheduled dispatch for distributors.' },
+      { key: 'may', kicker: 'Wholesalers', title: 'Wholesale distribution', text: 'Supermarkets, produce markets and distributors, with steady volume and scheduled dispatch.' },
       { key: 'agro', kicker: 'Agro-industry', title: 'Processing plants', text: 'Raw material for juice, frozen, sulphited and candied products to specification.' },
       { key: 'cas', kicker: 'Catering', title: 'Institutional catering', text: 'Fresh and frozen fruit for food service companies.' },
       { key: 'est', kicker: 'Public institutions', title: 'Public procurement', text: 'Supply for public institutions and government programs.' },
@@ -112,7 +112,7 @@ export default {
       email: 'Email',
       phone: 'Phone',
       type: 'Customer type',
-      types: ['Wholesaler', 'Juice plant', 'Frozen fruit plant', 'Sulphiting / candying plant', 'Orange peel', 'Catering / food service', 'Public institution', 'Other'],
+      types: ['Wholesaler / supermarket / market', 'Juice plant', 'Frozen fruit plant', 'Sulphiting / candying plant', 'Orange peel', 'Catering / food service', 'Public institution', 'Other'],
       message: 'Fruit, volume and dates',
       placeholder: 'E.g. 30 tonnes of cherries for sulphiting, delivered to plant, December and January',
       submit: 'Send request',

@@ -71,7 +71,7 @@ export default {
       { title: 'Otros', text: 'Cáscara de naranja y otros productos según el requerimiento de cada cliente.', fruits: 'Consúltenos' },
     ],
     clients: [
-      { key: 'may', kicker: 'Mayoristas', title: 'Distribución mayorista', text: 'Volumen constante y despacho programado para distribuidores.' },
+      { key: 'may', kicker: 'Mayoristas', title: 'Distribución mayorista', text: 'Supermercados, ferias y distribuidores, con volumen constante y despacho programado.' },
       { key: 'agro', kicker: 'Agroindustria', title: 'Plantas de proceso', text: 'Materia prima para jugo, congelado, sulfitado y confitado según especificación.' },
       { key: 'cas', kicker: 'Casinos', title: 'Alimentación colectiva', text: 'Fruta fresca y congelada para empresas de servicios de alimentación.' },
       { key: 'est', kicker: 'Instituciones del Estado', title: 'Compras públicas', text: 'Abastecimiento para instituciones y programas estatales.' },
@@ -115,7 +115,7 @@ export default {
       email: 'Correo',
       phone: 'Teléfono',
       type: 'Tipo de cliente',
-      types: ['Mayorista', 'Planta de jugos', 'Planta de congelado', 'Planta de sulfitado / confitado', 'Cáscara de naranja', 'Casino / food service', 'Institución del Estado', 'Otro'],
+      types: ['Mayorista / supermercado / feria', 'Planta de jugos', 'Planta de congelado', 'Planta de sulfitado / confitado', 'Cáscara de naranja', 'Casino / food service', 'Institución del Estado', 'Otro'],
       message: 'Especie, volumen y fechas',
       placeholder: 'Ej: 30 toneladas de cereza para sulfitado, entrega en planta, diciembre y enero',
       submit: 'Enviar solicitud',
