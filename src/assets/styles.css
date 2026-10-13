@@ -197,9 +197,9 @@ footer a{color:inherit}
 .t-manzana{background:linear-gradient(160deg,#a11f22 0%,#982220 55%,#811817 100%)}
 .t-pera{background:linear-gradient(160deg,#6c871e 0%,#617e1a 55%,#587918 100%)}
 .tile .art.photo{
-  -webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent),linear-gradient(to bottom,transparent,#000 8%,#000 92%,transparent);
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent),linear-gradient(to bottom,transparent,#000 4%,#000 96%,transparent);
   -webkit-mask-composite:source-in;
-  mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent),linear-gradient(to bottom,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent),linear-gradient(to bottom,transparent,#000 4%,#000 96%,transparent);
   mask-composite:intersect;
   width:clamp(120px,68%,200px)
 }
