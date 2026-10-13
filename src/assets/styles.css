@@ -170,3 +170,35 @@ footer a{color:inherit}
 @media (max-width:900px){.mv{grid-template-columns:1fr}.valores{grid-template-columns:1fr 1fr}}
 @media (max-width:540px){.valores{grid-template-columns:1fr}}
 .nav ul a.router-link-exact-active[href="/nosotros"],.mnav a.router-link-exact-active[href="/nosotros"]{color:var(--red)}
+
+/* ilustraciones de frutas */
+.mosaico{grid-auto-rows:minmax(220px,auto)}
+.tile .art{width:clamp(64px,30%,96px);height:auto;align-self:flex-end;margin-bottom:auto;pointer-events:none}
+.tile:has(.art)::after{display:none}
+.t-cereza .art,.t-manzana .art,.t-pera .art{position:absolute;margin:0}
+.t-cereza .art{width:clamp(120px,40%,250px);top:24px;right:24px}
+.t-manzana .art,.t-pera .art{width:clamp(84px,24%,150px);top:16px;right:16px}
+@media (max-width:860px){
+  .mosaico{grid-auto-rows:auto}
+  .tile{min-height:180px}
+  .tile .art,.t-cereza .art,.t-manzana .art,.t-pera .art{position:static;width:64px;margin:0 0 auto 0;align-self:flex-end}
+  .t-cereza .art{width:96px}
+}
+@media (prefers-reduced-motion:no-preference){.tile .art{transition:transform .3s}.tile:hover .art{transform:rotate(-6deg) scale(1.04)}}
+
+/* fotos de frutas: el fondo de cada tarjeta toma el tono de su foto y los bordes se difuminan */
+.t-cereza{background:radial-gradient(circle at 75% 25%,#c41a22,#9c0f13 75%)}
+.t-citricos{background:#ef900d}
+.t-uva{background:#59295c}
+.t-berries{background:#33235f}
+.t-kiwi{background:#4a7f1f}
+.t-manzana{background:radial-gradient(circle at 75% 35%,#a41f23,#861716 80%)}
+.t-pera{background:radial-gradient(circle at 75% 35%,#6c8a20,#567417 80%)}
+.tile .art.photo{-webkit-mask-image:radial-gradient(closest-side,#000 72%,transparent 100%);mask-image:radial-gradient(closest-side,#000 72%,transparent 100%)}
+.tile .art.photo{width:clamp(110px,62%,180px)}
+.t-cereza .art.photo{width:clamp(160px,50%,280px);top:16px;right:16px}
+.t-manzana .art.photo,.t-pera .art.photo{width:clamp(140px,44%,240px);top:8px;right:16px}
+@media (max-width:860px){
+  .tile .art.photo,.t-manzana .art.photo,.t-pera .art.photo{width:70%;max-width:180px}
+  .t-cereza .art.photo{width:46%;max-width:200px}
+}
