@@ -186,19 +186,31 @@ footer a{color:inherit}
 }
 @media (prefers-reduced-motion:no-preference){.tile .art{transition:transform .3s}.tile:hover .art{transform:rotate(-6deg) scale(1.04)}}
 
-/* fotos de frutas: el fondo de cada tarjeta toma el tono de su foto y los bordes se difuminan */
-.t-cereza{background:radial-gradient(circle at 75% 25%,#c41a22,#9c0f13 75%)}
-.t-citricos{background:#ef900d}
-.t-uva{background:#59295c}
-.t-berries{background:#33235f}
-.t-kiwi{background:#4a7f1f}
-.t-manzana{background:radial-gradient(circle at 75% 35%,#a41f23,#861716 80%)}
-.t-pera{background:radial-gradient(circle at 75% 35%,#6c8a20,#567417 80%)}
-.tile .art.photo{-webkit-mask-image:radial-gradient(closest-side,#000 72%,transparent 100%);mask-image:radial-gradient(closest-side,#000 72%,transparent 100%)}
-.tile .art.photo{width:clamp(110px,62%,180px)}
-.t-cereza .art.photo{width:clamp(160px,50%,280px);top:16px;right:16px}
-.t-manzana .art.photo,.t-pera .art.photo{width:clamp(140px,44%,240px);top:8px;right:16px}
+/* fotos de frutas: la foto se muestra rectangular, completa con su sombra.
+   El fondo de cada tarjeta usa el mismo color del fondo de su foto, y solo el borde
+   exterior de la foto se suaviza un poco para que no se note el corte. */
+.t-cereza{background:linear-gradient(160deg,#c51b23 0%,#af1417 55%,#9e0f0f 100%)}
+.t-citricos{background:#ec8d0a}
+.t-uva{background:#58285b}
+.t-berries{background:#322363}
+.t-kiwi{background:#4a7e1e}
+.t-manzana{background:linear-gradient(160deg,#a11f22 0%,#982220 55%,#811817 100%)}
+.t-pera{background:linear-gradient(160deg,#6c871e 0%,#617e1a 55%,#587918 100%)}
+.tile .art.photo{
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent),linear-gradient(to bottom,transparent,#000 8%,#000 92%,transparent);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent),linear-gradient(to bottom,transparent,#000 8%,#000 92%,transparent);
+  mask-composite:intersect;
+  width:clamp(120px,68%,200px)
+}
+.t-cereza .art.photo{width:clamp(170px,52%,300px);top:12px;right:12px}
+.t-manzana .art.photo,.t-pera .art.photo{width:clamp(150px,42%,240px);top:50%;transform:translateY(-50%);right:16px}
 @media (max-width:860px){
-  .tile .art.photo,.t-manzana .art.photo,.t-pera .art.photo{width:70%;max-width:180px}
-  .t-cereza .art.photo{width:46%;max-width:200px}
+  .tile .art.photo,.t-manzana .art.photo,.t-pera .art.photo{width:78%;max-width:200px}
+  .t-cereza .art.photo{width:48%;max-width:220px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .tile .art.photo{transition:transform .35s ease}
+  .tile:hover .art.photo{transform:rotate(-5deg) scale(1.07)}
+  .t-manzana:hover .art.photo,.t-pera:hover .art.photo{transform:translateY(-50%) rotate(-5deg) scale(1.07)}
 }
