@@ -232,3 +232,6 @@ footer a{color:inherit}
 .mv-card{background:var(--bg)}
 @media (max-width:760px){.team{grid-template-columns:1fr}.team-side img{aspect-ratio:4/3}}
 .valor{background:var(--soft)}
+@media (max-width:860px){
+  .t-manzana .art.photo,.t-pera .art.photo,.t-manzana:hover .art.photo,.t-pera:hover .art.photo{transform:none;top:auto;right:auto}
+}
