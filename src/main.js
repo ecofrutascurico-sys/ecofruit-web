@@ -5,5 +5,6 @@ import '@fontsource/outfit/800.css'
 import '@fontsource/outfit/900.css'
 import './assets/styles.css'
 import App from './App.vue'
+import router from './router.js'
 
-createApp(App).mount('#app')
+createApp(App).use(router).mount('#app')

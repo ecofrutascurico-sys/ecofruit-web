@@ -36,8 +36,16 @@ async function enviar() {
         <div class="datos">
           <div class="dato"><span>{{ t.contact.phoneLabel }}</span><strong><a :href="`https://wa.me/${site.whatsapp}`" target="_blank" rel="noopener">{{ site.phone }}</a></strong></div>
           <div class="dato"><span>{{ t.contact.emailLabel }}</span><strong><a :href="`mailto:${site.email}`">{{ site.email }}</a></strong></div>
-          <div class="dato"><span>{{ t.contact.placeLabel }}</span><strong>{{ site.place }}</strong></div>
+          <div class="dato"><span>{{ t.contact.placeLabel }}</span><strong>{{ site.place }}</strong>
+            <a class="more-link" :href="site.mapsUrl" target="_blank" rel="noopener">{{ t.contact.mapLink }} →</a></div>
         </div>
+        <iframe
+          class="mapa"
+          :src="`https://maps.google.com/maps?q=${site.lat},${site.lng}&z=14&output=embed`"
+          :title="site.place"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
 
       <form name="cotizacion" @submit.prevent="enviar">

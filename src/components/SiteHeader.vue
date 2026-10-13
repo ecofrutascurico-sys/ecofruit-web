@@ -2,23 +2,30 @@
 import LogoFull from './LogoFull.vue'
 import { useLang } from '../useLang.js'
 const { lang, t, setLang } = useLang()
-const links = ['inicio', 'quienes', 'que', 'contacto']
+
+// Inicio, Qué hacemos y Contacto son secciones de la portada; Nosotros es una página aparte
+const links = [
+  { key: 'inicio', to: { path: '/', hash: '#inicio' } },
+  { key: 'nosotros', to: '/nosotros' },
+  { key: 'que', to: { path: '/', hash: '#que' } },
+  { key: 'contacto', to: { path: '/', hash: '#contacto' } },
+]
 </script>
 
 <template>
   <header class="top">
     <div class="wrap nav">
-      <a class="logo" href="#inicio" aria-label="EcoFruit"><LogoFull /></a>
+      <RouterLink class="logo" to="/" aria-label="EcoFruit"><LogoFull /></RouterLink>
       <ul>
-        <li v-for="id in links" :key="id"><a :href="`#${id}`">{{ t.nav[id] }}</a></li>
+        <li v-for="l in links" :key="l.key"><RouterLink :to="l.to">{{ t.nav[l.key] }}</RouterLink></li>
       </ul>
       <span class="lang">
         <button :class="{ on: lang === 'es' }" @click="setLang('es')">ES</button> |
         <button :class="{ on: lang === 'en' }" @click="setLang('en')">EN</button>
       </span>
     </div>
-    <nav class="wrap mnav" :aria-label="t.nav.inicio">
-      <a v-for="id in links" :key="id" :href="`#${id}`">{{ t.nav[id] }}</a>
+    <nav class="wrap mnav" aria-label="Menú">
+      <RouterLink v-for="l in links" :key="l.key" :to="l.to">{{ t.nav[l.key] }}</RouterLink>
     </nav>
   </header>
 </template>

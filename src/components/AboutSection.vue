@@ -10,6 +10,7 @@ const { t } = useLang()
         <div class="kicker">{{ t.about.kicker }}</div>
         <h2 style="margin-top:12px">{{ t.about.title }}</h2>
         <p v-for="(p, i) in t.about.paragraphs" :key="i">{{ p }}</p>
+        <RouterLink class="more-link" to="/nosotros">{{ t.about.more }} →</RouterLink>
       </div>
       <div class="cifras">
         <div v-for="(s, i) in t.about.stats" :key="i" class="cifra">

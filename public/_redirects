@@ -1,0 +1,5 @@
+# La página antigua usaba /about: la redirigimos a la nueva página Nosotros
+/about     /nosotros    301
+/about/*   /nosotros    301
+# Todas las rutas las maneja Vue
+/*         /index.html  200

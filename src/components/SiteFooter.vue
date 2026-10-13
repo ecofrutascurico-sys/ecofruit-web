@@ -20,7 +20,7 @@ const year = new Date().getFullYear()
       </div>
       <div>
         <h4>{{ t.footer.place }}</h4>
-        <p>{{ site.place }}</p>
+        <p><a :href="site.mapsUrl" target="_blank" rel="noopener">{{ site.place }}</a></p>
         <p>
           <a v-if="site.instagram" :href="site.instagram" target="_blank" rel="noopener">Instagram</a>
           <template v-if="site.instagram && site.facebook"> · </template>
