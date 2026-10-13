@@ -1,0 +1,5 @@
+Copia aquí los archivos de la fuente Garet con estos nombres exactos:
+  Garet-Book.woff2  (o Garet-Book.otf)
+  Garet-Bold.woff2  (o Garet-Bold.otf)
+  Garet-Heavy.woff2 (o Garet-Heavy.otf)
+Si no están, la página usa la fuente Outfit, que es muy parecida.

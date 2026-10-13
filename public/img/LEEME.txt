@@ -1,0 +1,2 @@
+Copia aquí las fotos (formato .jpg, idealmente de menos de 400 KB cada una).
+Luego escribe la ruta en src/content/es.js y en.js, por ejemplo: image: "/img/cereza.jpg"
