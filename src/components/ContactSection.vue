@@ -4,13 +4,15 @@ import { useLang } from '../useLang.js'
 import { site } from '../content/site.js'
 const { t } = useLang()
 
-const form = reactive({ nombre: '', empresa: '', correo: '', telefono: '', tipo: '', mensaje: '' })
+const form = reactive({ nombre: '', empresa: '', email: '', telefono: '', tipo: '', mensaje: '' })
 const estado = ref('') // '', 'sending', 'ok', 'error'
 
 // Envía a Netlify Forms (las solicitudes llegan al panel de Netlify y a tu correo)
 async function enviar() {
   estado.value = 'sending'
-  const data = new URLSearchParams({ 'form-name': 'cotizacion', ...form })
+  // El campo "email" hace que al presionar Responder en el aviso de Netlify, la respuesta le llegue al cliente
+  const subject = `Cotización web: ${form.empresa || form.nombre} (${form.tipo})`
+  const data = new URLSearchParams({ 'form-name': 'cotizacion', subject, ...form })
   try {
     const res = await fetch('/', {
       method: 'POST',
@@ -54,7 +56,7 @@ async function enviar() {
           <label for="f-empresa">{{ t.contact.form.company }}<input id="f-empresa" v-model="form.empresa" required /></label>
         </div>
         <div class="row2">
-          <label for="f-correo">{{ t.contact.form.email }}<input id="f-correo" v-model="form.correo" type="email" required /></label>
+          <label for="f-correo">{{ t.contact.form.email }}<input id="f-correo" v-model="form.email" type="email" required /></label>
           <label for="f-telefono">{{ t.contact.form.phone }}<input id="f-telefono" v-model="form.telefono" type="tel" /></label>
         </div>
         <label for="f-tipo">{{ t.contact.form.type }}
